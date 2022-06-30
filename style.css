@@ -4,6 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 
+
 /*
 VARIABLES
 */
@@ -14,8 +15,9 @@ VARIABLES
     --background-color: #e1f0ef;
     --h1-hover-color: #243e92;
     --prime-structure-size: 960px;
-    /*--universal-box-shadow: 1px 1px 5px 1px #0000004c;*/
+    --mobile-structure-size: 350px;
     --universal-box-shadow: 0px 0px 3px 1px #00000055;
+    --thick-shadow: 0px 0px 5px 1px #00000080;
 }
 
 
@@ -25,6 +27,10 @@ body{
     background-color: var(--azure-color);
     text-align: justify;
     font-size: medium;
+
+    max-width: var(--prime-structure-size);
+    min-width: var(--mobile-structure-size);
+    margin: auto;
 }
 
 
@@ -32,7 +38,6 @@ body{
 
 header{
     background-color: var(--lazuli-color);
-    width: var(--prime-structure-size);
     box-shadow: var(--universal-box-shadow);
     margin: 0px auto 0px auto;
 }
@@ -44,6 +49,7 @@ header > h1{
 }
 header > h1:hover{
     color: var(--gold-color);
+    transition: 0.4s ease;
 }
 header > img{
    width: 100%;
@@ -53,7 +59,6 @@ header > img{
 
 nav{
     background-color: var(--lazuli-color);
-    width: var(--prime-structure-size);
     box-shadow: var(--universal-box-shadow);
     margin-right: auto;
     margin-left: auto;
@@ -67,13 +72,13 @@ nav > a{
     font-weight: bold;
     color: var(--azure-color);
     text-decoration: none;
-    margin-left: 10px;
-    padding: 13px;
+    padding: 13px 18px;
 }
 nav > a:hover{
     color: var(--h1-hover-color);
     background-color: var(--gold-color);
     box-shadow: var(--universal-box-shadow);
+    transition: 0.4s ease;
 }
 
 
@@ -100,7 +105,6 @@ MAIN STRUCTURE AND VALUES INHERITED BY THEIR CHILDREN SECTIONS, ARTICLES, ETC.
 */
 main{
     background-color: var(--background-color);
-    width: var(--prime-structure-size);
     margin: 8px auto;    
 }
 main > section{
@@ -119,11 +123,14 @@ article > h1{
     padding: 5px;    
 }
 article > h1:hover{
+    transition: 0.4s ease;
     background-color: var(--gold-color);
     color: var(--h1-hover-color);
+    transition: 0.4s ease;
 }
 article > img:hover{
     box-shadow: var(--universal-box-shadow);
+    transition: 0.4s ease;
 }
 aside{
     padding: 3px;
@@ -135,6 +142,7 @@ aside{
 aside:hover{
     background-color: var(--lazuli-color);
     color: var(--azure-color);
+    transition: 0.4s ease;
 }
 
 
@@ -142,28 +150,25 @@ aside:hover{
 /*
 FLEX-BOX (TO INSERT IMAGES IN THE SAME ROW)
 */
-span{
-    display: flex;
-    flex-direction: row;
-}
-span > img{
-    width: 250px;
-}
-span > img:hover{
-    width: 250px;
-    height: 100%;
+article img{
+    float: left;
     box-shadow: var(--universal-box-shadow);
 }
-span > p{
+article img:hover{
+    height: 100%;
+    box-shadow: var(--thick-shadow);
+    transition: 0.4s ease;
+}
+article p{
     margin-top: 0px;
     padding-left: 15px;
     padding-right: 17px;
     height: 350px;
     overflow-y: hidden;
 }
-span > p:hover{
-    padding-right: 0px;
+article p:hover{
     overflow-y: scroll;
+    transition: 0.4s;
 }
 img{
     width: 250px;
@@ -173,12 +178,7 @@ img{
 
 
 
-/*
-RESIZE SPECIFIC ARTICLES
-*/
-article#secondArticle > span > p{
-    height: 230px;
-}
+
 
 
 @keyframes fade{
@@ -204,13 +204,10 @@ article#secondArticle > span > p{
 
 
 
-/*
-RODAPÉ
-*/
+
+
 footer{
-    margin: 0px auto;
-    width: var(--prime-structure-size);
-    padding-bottom: 30px;
+    margin: 0 auto;
 }
 footer > p{
     padding: 25px;
@@ -219,5 +216,28 @@ footer > p{
     box-shadow: var(--universal-box-shadow);    
 }
 footer > p:hover{
-    color: var(--gold-color);   
+    color: var(--gold-color);
+    transition: 0.4s ease;
+}
+
+
+
+
+
+@media screen and (max-width: 960px){
+    .container{
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .container{
+        grid-template-columns: 1fr;
+    }
+    .content{
+        grid: 1;
+    }
+    .sidebar{
+        grid: 2;
+    }
 }
