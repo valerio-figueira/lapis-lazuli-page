@@ -147,36 +147,31 @@ aside:hover{
 
 
 
-/*
-FLEX-BOX (TO INSERT IMAGES IN THE SAME ROW)
-*/
-article img{
+/*IMG POSITION ON ARTICLE*/
+.content img{
     float: left;
+    margin: 0px 16px 5px 0px;
     box-shadow: var(--universal-box-shadow);
 }
-article img:hover{
+.content img:hover{
     height: 100%;
     box-shadow: var(--thick-shadow);
     transition: 0.4s ease;
 }
-article p{
+.content p{
+    text-align: justify;
+    text-indent: 30px;
     margin-top: 0px;
-    padding-left: 15px;
-    padding-right: 17px;
-    height: 350px;
-    overflow-y: hidden;
-}
-article p:hover{
-    overflow-y: scroll;
-    transition: 0.4s;
+    margin: 0 8px;
 }
 img{
     width: 250px;
     height: 100%;
 }
-
-
-
+.sidebar p{
+    text-indent: 30px;
+    margin: 0 6px;
+}
 
 
 
