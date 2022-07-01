@@ -7,18 +7,29 @@
     <title>Lapis Lazuli</title>
     <link rel="shortcut icon" href="img/blue-box.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
+
     <header>
         <img src="img/header.png" alt="header">
-        <h1>Lapis Lazuli</h1>        
+        <h1>Lapis Lazuli</h1>
     </header>
-    <nav>
-        <a href="#">Home</a>
+
+    <nav class="navbar">
+        <a href="#" id="home" class="active">
+            <span class="fa fa-home"></span>
+        </a>
         <a href="#">1st Element</a>
         <a href="#">2nd Element</a>
-        <a href="#">3rd Element</a>
+        <a href="#">Contact</a>
+        <a href="#" class="mobile">
+            <span class="fa fa-bars"></span>
+        </a>
     </nav>
+
     <main class="container">
 
             <section class="content">
@@ -42,6 +53,45 @@
                         <img src="img/pexels-toni-cuenca-405031.jpg" alt="limon">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis labore, blanditiis rerum explicabo voluptatem eum nemo recusandae culpa maxime velit? Alias repellat inventore dolore aliquam quas labore numquam esse fugiat! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque fugit corrupti ab dolores accusamus laboriosam fuga tenetur, distinctio nemo, nostrum nesciunt aspernatur. Nobis neque quaerat iste, tempora voluptatum error pariatur.</p>
                     <aside>Write by Ciclanus</aside>
+                </article>
+
+                <article>
+                    <h1>Table</h1>
+                    <table>
+                        <caption>GROCERY STORE</caption>
+                        <thead>
+                            <tr>
+                                <th rowspan="2" scope="colgroup"></th>
+                                <th colspan="2" scope="colgroup">Afonsus's Grocery</th>
+                                <th colspan="2" scope="colgroup">Afonsa's Grocery</th>
+                            </tr>
+                            <tr>
+                                <td>Produced</td>
+                                <td>Sold</td>
+                                <td>Produced</td>
+                                <td>Sold</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Broom</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Umbrella</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+
+                        </tfoot>
+                    </table>
                 </article>
             </section>
 
