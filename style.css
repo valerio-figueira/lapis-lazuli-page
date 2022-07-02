@@ -20,7 +20,9 @@ VARIABLES
     --thick-shadow: 0px 0px 6px 2px #00000080;
 }
 
-
+*{
+    box-sizing: border-box;
+}
 
 body{
     font-family: 'Source Sans Pro', sans-serif;
@@ -55,7 +57,7 @@ header > h1:hover{
 }
 header > img{
    width: 100%;
-   margin-bottom: -4px;
+   margin-bottom: -5px;
 }
 
 
@@ -63,11 +65,13 @@ header > img{
 nav{
     background-color: var(--lazuli-color);
     box-shadow: var(--universal-box-shadow);
-    margin: 15px 0;
+    margin-bottom: 15px;
     padding: 15px 0;
 }
 .fa.fa-home{
-    font-size: 18px;
+    font-size: 23px;
+    margin: -3px 0;
+    margin-right: -2px;
 }
 nav a{
     font-family: 'Source Sans Pro', sans-serif;
@@ -75,7 +79,6 @@ nav a{
     color: var(--azure-color);
     text-decoration: none;
     padding: 15px;
-    margin: 0;
 }
 nav > a:hover{
     color: var(--h1-hover-color);
@@ -99,9 +102,6 @@ nav > a:hover{
     grid-template-columns: 2fr 1fr;
     box-shadow: var(--universal-box-shadow);    
 }
-.sidebar{
-    margin-left: 15px;
-}
 .sidebar > article > img{
     width: 100%;
 }
@@ -116,13 +116,13 @@ main{
     margin: 8px auto;    
 }
 main > section{
-    padding: 15px;
+    padding: 15px 5px;
 }
 section > article{
     background-color: var(--azure-color);
     box-shadow: var(--universal-box-shadow);
-    margin: 10px auto 20px auto;
-    padding: 2px 15px 15px 15px;    
+    margin: 10px auto 40px auto;
+    padding: 2px 15px 15px 15px;
 }
 article > h1{
     background-color: var(--lazuli-color);
@@ -152,7 +152,18 @@ aside:hover{
     color: var(--azure-color);
     transition: 0.4s ease;
 }
-
+section{
+    margin: 5px 20px 5px 20px;
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+article{
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+article:hover{
+    transform: scale(1.05);
+}
 
 
 /*IMG POSITION ON ARTICLE*/
@@ -180,8 +191,6 @@ article > img{
     text-indent: 30px;
     margin: 0 6px;
 }
-
-
 
 
 @keyframes fade{
@@ -284,7 +293,12 @@ footer > p:hover{
         margin: 0;
         font-size: 17px;
     }
-    
+
+    .fa.fa-home{
+        font-size: 23px;
+        margin: -15px 0;
+        margin-right: 1.5px;
+    }    
 }
 
 @media screen and (max-width: 510px) {

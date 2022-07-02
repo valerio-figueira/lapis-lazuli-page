@@ -10,3 +10,13 @@ mobile.addEventListener('click', function(){
         mobile.className = "mobile";
     }
 })
+
+
+let year = new Date().getFullYear();
+let copyright = document.querySelector("#copyright");
+copyright.innerHTML += `${year} All rights reserved - Lapis Lazuli`;
+
+
+
+let articles = document.querySelectorAll("article");
+let content = document.querySelector(".content");
