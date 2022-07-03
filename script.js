@@ -18,5 +18,11 @@ copyright.innerHTML += `${year} All rights reserved - Lapis Lazuli`;
 
 
 
-let articles = document.querySelectorAll("article");
-let content = document.querySelector(".content");
+const mainTitle = document.querySelector("#main-title");
+
+mainTitle.addEventListener("mouseenter", function(){
+    mainTitle.style.cursor = "pointer";
+    mainTitle.addEventListener("click", function(){
+        window.open("./index.html", "_self");
+    })
+})
