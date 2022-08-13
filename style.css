@@ -49,10 +49,10 @@ header > h1{
     position: absolute;
     top: 100px;
     border-radius: 2px;
+    transition: 0.5s ease;
 }
 header > h1:hover{
-    color: var(--gold-color);
-    transition: 0.5s ease;
+    color: var(--gold-color);    
 }
 header > img{
    width: 100%;
@@ -78,12 +78,12 @@ nav a{
     color: var(--azure-color);
     text-decoration: none;
     padding: 15px;
+    transition: 0.4s ease;
 }
 nav > a:hover{
     color: var(--h1-hover-color);
     background-color: var(--gold-color);
-    box-shadow: var(--universal-box-shadow);
-    transition: 0.4s ease;
+    box-shadow: var(--universal-box-shadow);    
 }
 .mobile{
     display: none;
@@ -103,6 +103,8 @@ nav > a:hover{
 }
 .sidebar > article > img{
     width: 100%;
+    box-shadow: var(--universal-box-shadow);
+    transition: 0.7s;
 }
 
 
@@ -127,17 +129,15 @@ article > h1{
     background-color: var(--lazuli-color);
     color: var(--azure-color);
     box-shadow: var(--universal-box-shadow);
-    padding: 5px;    
+    padding: 5px; 
+    transition: 0.4s ease;   
 }
-article > h1:hover{
-    transition: 0.4s ease;
+article > h1:hover{    
     background-color: var(--gold-color);
     color: var(--h1-hover-color);
-    transition: 0.4s ease;
 }
 article > img:hover{
-    box-shadow: var(--universal-box-shadow);
-    transition: 0.4s ease;
+    box-shadow: var(--universal-box-shadow);    
 }
 aside{
     padding: 3px;
@@ -172,8 +172,7 @@ article:hover{
 }
 article img:hover{
     height: 100%;
-    box-shadow: var(--thick-shadow);
-    transition: 0.4s ease;
+    box-shadow: var(--thick-shadow);    
 }
 article p{
     text-align: justify;
@@ -184,6 +183,7 @@ article p{
 article > img{
     width: 250px;
     height: 100%;
+    transition: 0.7s ease;
 }
 .sidebar p{
     text-indent: 30px;
@@ -227,10 +227,10 @@ footer > p{
     font-style: italic;
     text-align: center;
     padding: 40px;
+    transition: 0.4s ease;
 }
 footer > p:hover{
-    color: var(--gold-color);
-    transition: 0.4s ease;
+    color: var(--gold-color);    
 }
 
 
