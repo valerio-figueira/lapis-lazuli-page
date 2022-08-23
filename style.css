@@ -65,14 +65,14 @@ nav{
     background-color: var(--lazuli-color);
     box-shadow: var(--universal-box-shadow);
     margin-bottom: 15px;
-    padding: 15px 0;
+    overflow: hidden;
 }
-.fa.fa-home{
+#home{
+    padding: 10.5px 16px;
     font-size: 23px;
-    margin: -3px 0;
-    margin-right: -2px;
 }
 nav a{
+    float: left;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: bold;
     color: var(--azure-color);
@@ -91,7 +91,9 @@ nav > a:hover{
 .active{
     background-color: #ffffff4d;
 }
-
+.clearfix{
+    clear: both;
+}
 
 /*
 [GRID] - CONTAINER BOX WITH CHILDREN CONTENTS AND SIDEBAR
@@ -145,22 +147,19 @@ aside{
     text-align: end;
     background-color: var(--background-color);
     box-shadow: 1px 1px 2px 1px #0000002f;
+    transition: 0.4s ease;
 }
 aside:hover{
     background-color: var(--lazuli-color);
-    color: var(--azure-color);
-    transition: 0.4s ease;
+    color: var(--azure-color);    
 }
 section{
-    margin: 5px 20px 5px 20px;
+    margin: 5px 10px 5px 10px;
     transition: 0.5s;
 }
 article{
     transition: 0.5s;
     transition-timing-function: ease-in-out;
-}
-article:hover{
-    transform: scale(1.05);
 }
 
 
@@ -292,6 +291,7 @@ footer > p:hover{
 
 @media screen and (max-width: 560px){
     .responsive a{
+        float: none;
         display: block;
     }
     .responsive{
